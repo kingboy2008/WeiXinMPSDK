@@ -1,4 +1,24 @@
-﻿using System;
+﻿#region Apache License Version 2.0
+/*----------------------------------------------------------------
+
+Copyright 2017 Jeffrey Su & Suzhou Senparc Network Technology Co.,Ltd.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied. See the License for the specific language governing permissions
+and limitations under the License.
+
+Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
+
+----------------------------------------------------------------*/
+#endregion Apache License Version 2.0
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -57,13 +77,13 @@ namespace Senparc.Weixin.QY.Test.MessageHandlers
         {
             var postModel = new PostModel()
             {
-                Msg_Signature = "845997ceb6e4fd73edd9a377be227848ce20d34f",
-                Timestamp = "1412587525",
-                Nonce = "1501543730",
+                Msg_Signature = "",
+                Timestamp = "",
+                Nonce = "",
 
-                Token = "fzBsmSaI8XE1OwBh",
-                EncodingAESKey = "9J8CQ7iF9mLtQDZrUM1loOVQ6oNDxVtBi1DBU2oaewl",
-                CorpId = "wx7618c0a6d9358622"
+                Token = "",
+                EncodingAESKey = "",
+                CorpId = ""
             };
             var messageHandler = new CustomerMessageHandlers(XDocument.Parse(testXml), postModel, 10);
             Assert.IsNotNull(messageHandler.RequestDocument);
